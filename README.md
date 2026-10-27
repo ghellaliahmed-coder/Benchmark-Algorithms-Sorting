@@ -75,6 +75,13 @@ The benchmark results show that Quick Sort outperformed Bubble Sort in three of 
 - **Partial Array:** Quick Sort took 635 µs, compared with 4,333 µs for Bubble Sort.
 - **Sorted Array:** Bubble Sort completed in 5 µs, while Quick Sort took 730 µs.
 
+## Performance Chart
+
+The chart below compares Quick Sort and Bubble Sort
+across the four test cases.
+
+![Sorting Algorithms Performance](performance-chart.png)
+
 ### Discussion
 
 Quick Sort performed better on the random, reverse, and partially sorted arrays in these measurements. Its average time complexity is O(n log n), although its worst-case complexity can reach O(n²) because this implementation selects the first element as the pivot.
