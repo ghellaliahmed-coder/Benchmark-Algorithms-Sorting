@@ -97,6 +97,10 @@ Each algorithm receives an independent copy of the original array. Array copying
 
 ## Conclusion
 
-This project demonstrates how the initial order of data can affect sorting performance. Bubble Sort can perform efficiently on an already sorted array because it can terminate after one pass. Quick Sort is generally efficient on average, but its performance may deteriorate when the first-element pivot produces highly unbalanced partitions.
+This project compares Quick Sort and Bubble Sort using four different input-array configurations.
 
-The final performance analysis should be based on the actual measurements collected during execution.
+The benchmark results show that Quick Sort performed substantially better on random, reverse, and partially sorted arrays. Bubble Sort performed best on the already sorted array because its early-termination mechanism stops the algorithm when no swaps are needed.
+
+Random pivot selection reduces the likelihood of unbalanced partitions in Quick Sort, although its worst-case time complexity remains O(n²).
+
+Execution times may vary depending on the input data, JVM warm-up, and system conditions. Repeated measurements would provide a more reliable performance comparison.
