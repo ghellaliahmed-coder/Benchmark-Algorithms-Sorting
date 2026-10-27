@@ -66,6 +66,23 @@ Replace the placeholders with the actual measurements printed by the program.
 | Quick Sort | 526 | 1940 | 635 | 730 |
 | Bubble Sort | 5821 | 4077 | 4333 | 5 |
 
+## Results Analysis
+
+The benchmark results show that Quick Sort outperformed Bubble Sort in three of the four test cases.
+
+- **Random Array:** Quick Sort completed in 526 µs, compared with 5,821 µs for Bubble Sort.
+- **Reverse Array:** Quick Sort took 1,940 µs, while Bubble Sort took 4,077 µs.
+- **Partial Array:** Quick Sort took 635 µs, compared with 4,333 µs for Bubble Sort.
+- **Sorted Array:** Bubble Sort completed in 5 µs, while Quick Sort took 730 µs.
+
+### Discussion
+
+Quick Sort performed better on the random, reverse, and partially sorted arrays in these measurements. Its average time complexity is O(n log n), although its worst-case complexity can reach O(n²) because this implementation selects the first element as the pivot.
+
+Bubble Sort performed best on the already sorted array because the `swapped` flag allowed it to stop after one pass without performing any swaps. This explains its measured execution time of 5 µs.
+
+These results illustrate how the initial arrangement of data affects sorting performance. However, execution times may vary between runs due to JVM warm-up, system activity, and other runtime factors. The results should therefore be interpreted as measurements from a single test run rather than universal performance guarantees.
+
 ## Performance Chart
 
 A comparison chart should be added after collecting the actual execution times. It should compare Quick Sort and Bubble Sort across all four test cases.
