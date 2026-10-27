@@ -31,7 +31,7 @@ The program tests each algorithm using four different arrays:
 | Parameter | Value |
 |---|---|
 | Programming Language | Java |
-| Array Size | 2,000 elements |
+| Array Size | 100,000 elements |
 | Number of Algorithms | 2 |
 | Number of Test Cases | 4 |
 | Total Sorting Runs | 8 |
@@ -42,12 +42,12 @@ The program tests each algorithm using four different arrays:
 
 ### Quick Sort
 
-Quick Sort uses the Divide and Conquer approach. The first element of each array segment is selected as the pivot. The partition method rearranges elements around the pivot, and recursive calls sort the remaining left and right segments.
+Quick Sort uses the Divide and Conquer approach. A random element from the current array segment is selected as the pivot. The partition method rearranges elements around the pivot, and recursive calls sort the remaining left and right segments.
 
 - Average Time Complexity: `O(n log n)`
 - Worst-case Time Complexity: `O(n²)`
 
-Choosing the first element as the pivot may cause poor performance on already sorted or reverse-sorted arrays.
+Random pivot selection reduces the likelihood of highly unbalanced partitions, but it does not eliminate the worst-case scenario.
 
 ### Bubble Sort
 
@@ -70,10 +70,14 @@ Replace the placeholders with the actual measurements printed by the program.
 
 The benchmark results show that Quick Sort outperformed Bubble Sort in three of the four test cases.
 
-- **Random Array:** Quick Sort completed in 526 µs, compared with 5,821 µs for Bubble Sort.
-- **Reverse Array:** Quick Sort took 1,940 µs, while Bubble Sort took 4,077 µs.
-- **Partial Array:** Quick Sort took 635 µs, compared with 4,333 µs for Bubble Sort.
-- **Sorted Array:** Bubble Sort completed in 5 µs, while Quick Sort took 730 µs.
+- **Random Array:** Quick Sort took 18,113 µs, while Bubble Sort took 14,154,928 µs.
+- **Reverse Array:** Quick Sort took 4,763 µs, compared with 10,667,568 µs for Bubble Sort.
+- **Partial Array:** Quick Sort completed in 4,681 µs, while Bubble Sort took 4,417,852 µs.
+- **Sorted Array:** Quick Sort took 3,691 µs, while Bubble Sort took only 25 µs.
+
+Quick Sort performed substantially better on random, reverse, and partially sorted arrays. Bubble Sort performed best on the already sorted array because the implementation uses a `swapped` flag to terminate early when no swaps occur.
+
+These measurements represent a single execution and may vary between runs due to random pivot selection and system performance.
 
 ## Performance Chart
 
@@ -84,7 +88,7 @@ The benchmark results show that Quick Sort outperformed Bubble Sort in three of 
 - `main()` runs the sorting experiments and records execution times.
 - `createArrays()` generates the four test arrays.
 - `quickSort()` performs recursive Quick Sort.
-- `partition()` partitions the array using the first element as the pivot.
+- `partition()` partitions the array using a randomly selected pivot.
 - `bubbleSort()` implements Bubble Sort with early termination.
 - `isSorted()` checks whether the resulting array is sorted in ascending order.
 - `printResults()` displays the summary table.
