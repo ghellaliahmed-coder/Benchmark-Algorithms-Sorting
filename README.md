@@ -63,8 +63,8 @@ Replace the placeholders with the actual measurements printed by the program.
 
 | Algorithm | Random (µs) | Reverse (µs) | Partial (µs) | Sorted (µs) |
 |---|---:|---:|---:|---:|
-| Quick Sort | 526 | 1940 | 635 | 730 |
-| Bubble Sort | 5821 | 4077 | 4333 | 5 |
+| Quick Sort | 18113 | 4763 | 4681 | 3691 |
+| Bubble Sort | 14154928 | 10667568 | 4417852 | 25 |
 
 ## Results Analysis
 
