@@ -6,7 +6,7 @@ A Java project that compares the performance of Quick Sort and Bubble Sort using
 
 - **Student Name:** [احمد صلاح الدين القلالي]
 - **University ID:** [3167062]
-- **Section Number:** [B]
+- **Section Number:** [C]
 
 ## Project Description
 
