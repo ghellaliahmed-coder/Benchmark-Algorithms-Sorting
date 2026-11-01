@@ -47,41 +47,21 @@ The following results are the execution times from the run supplied for this ben
 
 The charts below show the measured execution time for each algorithm in each input case. The vertical axis is measured in microseconds.
 
-### Random Array
 
-```mermaid
-xychart-beta
-    x-axis ["Selection", "Insertion", "Bubble", "Merge", "Quick", "Radix"]
-    y-axis "Time (µs)" 0 --> 12000000
-    bar [2021892, 1160206, 11739783, 28951, 23430, 8162]
-```
+## Performance Charts
+
+### Random Array
+![Random Array Performance](images/Random-diagram.png)
 
 ### Reverse Array
-
-```mermaid
-xychart-beta
-    x-axis ["Selection", "Insertion", "Bubble", "Merge", "Quick", "Radix"]
-    y-axis "Time (µs)" 0 --> 10000000
-    bar [1889398, 2129157, 9177307, 6144, 3221, 3834]
-```
+![Reverse Array Performance](images/Reverse-diagram.png)
 
 ### Partially Sorted Array
-
-```mermaid
-xychart-beta
-    x-axis ["Selection", "Insertion", "Bubble", "Merge", "Quick", "Radix"]
-    y-axis "Time (µs)" 0 --> 4000000
-    bar [1014017, 244998, 3785122, 3721, 4532, 4203]
-```
+![Partial Array Performance](images/PartiallySorted-diagram.png)
 
 ### Sorted Array
+![Sorted Array Performance](images/Sorted-diagram.png)
 
-```mermaid
-xychart-beta
-    x-axis ["Selection", "Insertion", "Bubble", "Merge", "Quick", "Radix"]
-    y-axis "Time (µs)" 0 --> 1100000
-    bar [1016096, 58, 20, 3333, 3177, 3439]
-```
 
 ## Time Complexity Comparison
 
